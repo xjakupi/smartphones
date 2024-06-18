@@ -1,0 +1,11 @@
+.footer-main {
+  flex-grow: 1;
+  border-top: solid 1px #ccc;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  display: block;
+  unicode-bidi: isolate;
+}

@@ -1,0 +1,39 @@
+.phone-img {
+  height: 200px;
+  width: 98px;
+}
+.container-main-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin-top: 50px;
+}
+.phone-card-div {
+  width: 170px;
+  height: 312px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.phone-card-div:hover {
+  background-color: #f2f2ff;
+}
+
+.phone-model-name {
+  font-weight: 700;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.phone-model-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00a000;
+}
