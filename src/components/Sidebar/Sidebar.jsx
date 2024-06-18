@@ -11,8 +11,7 @@ import { useState, useContext } from "react";
 import "../Sidebar/Sidebar.css";
 import FilterIcon from "../assets/icons/filter.png";
 import { AppContext } from "../../App";
-import { motion } from "framer-motion"
-
+import { motion } from "framer-motion";
 
 function Sidebar() {
   const { searchPhones, setSearchPhones } = useContext(AppContext);
@@ -21,10 +20,9 @@ function Sidebar() {
   const variants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "-100%" },
-  }
+  };
   const [state, setState] = useState({
     left: false,
-
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -41,11 +39,10 @@ function Sidebar() {
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
- 
         <h4 className="checkbox-filters-h4-mobile">Stores</h4>
         <div className="checkbox-div-mobile">
           <input
@@ -101,7 +98,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
-            onClick={()=> setActiveBrand('Xiaomi')}
+            onClick={() => setActiveBrand("Xiaomi")}
           />
           <label className="checkbox-label">Xiaomi</label>
         </div>
@@ -111,6 +108,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveBrand("Samsung")}
           />
           <label className="checkbox-label">Samsung</label>
         </div>
@@ -120,6 +118,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="apple"
             className="checkbox-filter"
+            onClick={() => setActiveBrand("Apple")}
           />
           <label className="checkbox-label">Apple</label>
         </div>
@@ -129,6 +128,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveBrand("")}
           />
           <label className="checkbox-label">Huawei</label>
         </div>
@@ -138,6 +138,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveBrand("OnePlus")}
           />
           <label className="checkbox-label">OnePlus</label>
         </div>
