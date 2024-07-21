@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 
 function Sidebar() {
   const { searchPhones, setSearchPhones } = useContext(AppContext);
-  const { phones, setActiveBrand } = useContext(AppContext);
+  const { phones, setActiveBrand, setActiveStore } = useContext(AppContext);
   const [filteredPhones, setFilteredPhones] = useState(phones);
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -50,6 +50,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("ledikom")}
           />
           <label className="checkbox-label">Ledikom</label>
         </div>
@@ -59,6 +60,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("anhoch")}
           />
           <label className="checkbox-label">Anhoch</label>
         </div>
@@ -68,6 +70,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("mobelix")}
           />
           <label className="checkbox-label">Mobelix</label>
         </div>
@@ -77,6 +80,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("neptun")}
           />
           <label className="checkbox-label">Neptun</label>
         </div>
@@ -86,6 +90,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("setec")}
           />
           <label className="checkbox-label">Setec</label>
         </div>
@@ -219,6 +224,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("ledikom")}
           />
           <label className="checkbox-label">Ledikom</label>
         </div>
@@ -228,6 +234,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("anhoch")}
           />
           <label className="checkbox-label">Anhoch</label>
         </div>
@@ -237,6 +244,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("mobelix")}
           />
           <label className="checkbox-label">Mobelix</label>
         </div>
@@ -246,6 +254,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("neptun")}
           />
           <label className="checkbox-label">Neptun</label>
         </div>
@@ -255,6 +264,7 @@ function Sidebar() {
             name="checkbox-filter"
             id="checkbox-filter"
             className="checkbox-filter"
+            onClick={() => setActiveStore("setec")}
           />
           <label className="checkbox-label">Setec</label>
         </div>
@@ -268,6 +278,7 @@ function Sidebar() {
                 name="checkbox-filter"
                 id="checkbox-filter"
                 className="checkbox-filter"
+                onClick={() => setActiveBrand("Xiaomi")}
               />
               <label className="checkbox-label">Xiaomi</label>
             </div>
@@ -277,6 +288,7 @@ function Sidebar() {
                 name="checkbox-filter"
                 id="checkbox-filter"
                 className="checkbox-filter"
+                onClick={() => setActiveBrand("Samsung")}
               />
               <label className="checkbox-label">Samsung</label>
             </div>
@@ -286,6 +298,7 @@ function Sidebar() {
                 name="checkbox-filter"
                 id="checkbox-filter"
                 className="checkbox-filter"
+                onClick={() => setActiveBrand("Apple")}
               />
               <label className="checkbox-label">Apple</label>
             </div>
@@ -295,6 +308,7 @@ function Sidebar() {
                 name="checkbox-filter"
                 id="checkbox-filter"
                 className="checkbox-filter"
+                onClick={() => setActiveBrand("Hawei")}
               />
               <label className="checkbox-label">Huawei</label>
             </div>
@@ -304,6 +318,7 @@ function Sidebar() {
                 name="checkbox-filter"
                 id="checkbox-filter"
                 className="checkbox-filter"
+                onClick={() => setActiveBrand("OnePlus")}
               />
               <label className="checkbox-label">OnePlus</label>
             </div>
