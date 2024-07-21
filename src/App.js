@@ -22,10 +22,9 @@ const router = createBrowserRouter([
 function App() {
   const [searchPhones, setSearchPhones] = useState("");
   const [phones, setPhones] = useState([]);
-  const [filteringPhones, setFilteringPhones] = useState([])
-  const [activeBrand, setActiveBrand] = useState('')
-
-
+  const [filteringPhones, setFilteringPhones] = useState([]);
+  const [activeBrand, setActiveBrand] = useState("");
+  const [activeStore, setActiveStore] = useState("");
 
   const fetchPhones = async () => {
     try {
@@ -51,10 +50,21 @@ function App() {
     fetchPhones();
   }, []);
 
-  
   return (
     <div className="app">
-      <AppContext.Provider value={{ searchPhones, setSearchPhones, phones, setFilteringPhones, activeBrand, setActiveBrand, filteringPhones  }}>
+      <AppContext.Provider
+        value={{
+          searchPhones,
+          setSearchPhones,
+          phones,
+          setFilteringPhones,
+          activeBrand,
+          setActiveBrand,
+          filteringPhones,
+          activeStore,
+          setActiveStore,
+        }}
+      >
         <RouterProvider router={router} />
       </AppContext.Provider>
     </div>
